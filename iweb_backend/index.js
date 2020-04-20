@@ -19,7 +19,7 @@ app.use(bodyParser.json({})); //将application/json数据解析到req.body
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["http://127.0.0.1: 8080", "http://localhost:8080"],
+    origin: ["http://127.0.0.1:8080", "http://localhost:8080"],
     //响应消息必须明确允许客户端携带身份认证信息
     credentials: true,
   })
