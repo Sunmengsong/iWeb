@@ -128,7 +128,7 @@
                 <a href>我的收藏</a>
               </div>
               <div class="userlink_2 clearfloat">
-                <a href>进入个人中心</a>
+                <router-link to="/user">进入个人中心</router-link>
                 <a href @click="logOut">退出登录</a>
               </div>
             </div>

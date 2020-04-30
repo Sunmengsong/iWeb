@@ -11,10 +11,10 @@ let router = express.Router();
  */
 router.get("/register", (req, res, next) => {
   let options = {
-    size: 5,
+    size: 4,
     ignoreChars: "0o1iIl",
     noise: 5, //干扰线数量
-    color: true,
+    color: false,
     bakcground: "#EFE",
     width: 120,
     height: 40,

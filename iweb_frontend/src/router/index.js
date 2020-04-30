@@ -68,6 +68,18 @@ const routes = [
       title: "讲师列表-iweb在线课堂",
     },
   },
+  {
+    path: "/user",
+    component: () => import("../views/User.vue"),
+    redirect: { path: '/user/user' },
+    children: [
+      { path: 'user', component: () => import("../views/user/User.vue") },
+      { path: 'favorite', component: () => import("../views/user/Favorite.vue") },
+      { path: 'mycourse', component: () => import("../views/user/myCourse.vue") },
+      { path: 'personal', component: () => import("../views/user/Personal.vue") },
+      { path: 'changepwd', component: () => import("../views/user/changePwd.vue") },
+    ]
+  }
 ];
 
 const router = new VueRouter({

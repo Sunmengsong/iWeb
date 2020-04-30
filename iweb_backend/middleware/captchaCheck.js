@@ -1,14 +1,16 @@
 module.exports = function (req, res, next) {
   let captcha = req.body.captcha;
+  //console.log(captcha.toLowerCase());
+  //console.log(req.session.registerCaptcha);
   if (!captcha) {
     let output = {
       code: 409,
-      msg: "captcha required",
+      msg: "captcha required"
     };
     res.send(output);
     return;
   }
-  if (captcha.toLowerCase() !== req.session.registerCaptcha) {
+  if (captcha.toLowerCase() !== req.session.registerCaptcha.toLowerCase()) {
     //客户端提交的验证码有误
     let output = {
       code: 410,
